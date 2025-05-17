@@ -1,0 +1,141 @@
+/* app/globals.css or styles/globals.css */
+@import url("https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback");
+
+@import "tailwindcss";
+@import "./additional-styles/utility-patterns.css" layer(components);
+
+@plugin "@tailwindcss/forms" {
+  strategy: base;
+}
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant sidebar-expanded (&:is(.sidebar-expanded *));
+
+@theme {
+  --shadow-sm: 0 1px 1px 0 rgb(0 0 0 / 0.05), 0 1px 2px 0 rgb(0 0 0 / 0.02);
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #bfc4cd;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
+  --color-violet-50: #e8ecf7;
+  --color-violet-100: #cfd1e8;
+  --color-violet-200: #a9a9c9;
+  --color-violet-300: #9096c4;
+  --color-violet-400: #797eaf;
+  --color-violet-500: #666996;
+  --color-violet-600: #474777;
+  --color-violet-700: #323768;
+  --color-violet-800: #202153;
+  --color-violet-900: #15173d;
+  --color-violet-950: #060814;
+
+  --color-sky-50: #e3f3ff;
+  --color-sky-100: #d1ecff;
+  --color-sky-200: #b6e1ff;
+  --color-sky-300: #a0d7ff;
+  --color-sky-400: #7bc8ff;
+  --color-sky-500: #67bfff;
+  --color-sky-600: #56b1f3;
+  --color-sky-700: #3193da;
+  --color-sky-800: #1c71ae;
+  --color-sky-900: #124d79;
+  --color-sky-950: #0b324f;
+
+  --color-green-50: #ecf4dc;
+  --color-green-100: #d7e5b7;
+  --color-green-200: #c9dbaa;
+  --color-green-300: #c9dbaa;
+  --color-green-400: #adc87f;
+  --color-green-500: #92b655;
+  --color-green-600: #597b20;
+  --color-green-700: #3c5215;
+  --color-green-800: #222d0e;
+  --color-green-900: #1e290b;
+  --color-green-950: #121906;
+
+  --color-red-50: #f9e6e4;
+  --color-red-100: #f8ddd7;
+  --color-red-200: #f1bbb0;
+  --color-red-300: #e99988;
+  --color-red-400: #e27761;
+  --color-red-500: #e55c45;
+  --color-red-600: #e55c45;
+  --color-red-700: #b2452e;
+  --color-red-800: #893524;
+  --color-red-900: #602519;
+  --color-red-950: #37150e;
+
+  --color-yellow-50: #fff2c9;
+  --color-yellow-100: #ffe7a0;
+  --color-yellow-200: #ffe081;
+  --color-yellow-300: #ffd968;
+  --color-yellow-400: #f7cd4c;
+  --color-yellow-500: #f0bb33;
+  --color-yellow-600: #dfad2b;
+  --color-yellow-700: #bc9021;
+  --color-yellow-800: #816316;
+  --color-yellow-900: #4f3d0e;
+  --color-yellow-950: #342809;
+
+  --font-inter: "Inter", "sans-serif";
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-base--letter-spacing: -0.01em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.01em;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-xl--letter-spacing: -0.01em;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.33;
+  --text-2xl--letter-spacing: -0.01em;
+  --text-3xl: 1.88rem;
+  --text-3xl--line-height: 1.33;
+  --text-3xl--letter-spacing: -0.01em;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.25;
+  --text-4xl--letter-spacing: -0.02em;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.25;
+  --text-5xl--letter-spacing: -0.02em;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1.2;
+  --text-6xl--letter-spacing: -0.02em;
+
+  --breakpoint-xs: 480px;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
