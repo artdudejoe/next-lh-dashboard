@@ -13,7 +13,7 @@ import { Bar } from "react-chartjs-2";
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const options = {
-  indexAxis: "y" as const,
+  indexAxis: "x" as const,
   responsive: true,
   plugins: {
     legend: {
@@ -36,7 +36,7 @@ const data = {
     {
       label: "Work Orders",
       data: [25, 18, 10, 40], // Example percentages
-      backgroundColor: ["#3B82F6", "#60A5FA", "#10B981", "#EF4444"],
+      backgroundColor: ["#dfad2b", "#3193da", "#92b655", "#e55c45"],
     },
   ],
 };

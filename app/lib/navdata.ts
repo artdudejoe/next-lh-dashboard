@@ -17,8 +17,8 @@ export const dashpages = [
     ],
   },
   {
-    linkname: "Providers",
-    linkurl: "/providers",
+    linkname: "Vendors",
+    linkurl: "/vendors",
     linkicon: "truck-filled",
     linkbadge: "4",
     linksubs: [],

@@ -7,7 +7,7 @@ import { chartAreaGradient } from "@/components/charts/chartjs-config";
 // Import utilities
 import { adjustColorOpacity, getCssVariable } from "@/components/utils/utils";
 
-export default function DashboardCard03() {
+export default function DashboardHealth() {
   const chartData = {
     labels: [
       "12-01-2022",
@@ -38,11 +38,11 @@ export default function DashboardCard03() {
       "01-01-2025",
     ],
     datasets: [
-      // Indigo line
+      // Red line
       {
         data: [
-          540, 466, 540, 466, 385, 432, 334, 334, 289, 289, 200, 289, 222, 289,
-          289, 403, 554, 304, 289, 270, 134, 270, 829, 344, 388, 364,
+          622, 622, 426, 471, 365, 365, 238, 324, 288, 206, 324, 324, 500, 409,
+          409, 273, 232, 273, 500, 570, 767, 808, 685, 767, 685, 685,
         ],
         fill: true,
         backgroundColor: function (context: any) {
@@ -51,52 +51,46 @@ export default function DashboardCard03() {
           const gradientOrColor = chartAreaGradient(ctx, chartArea, [
             {
               stop: 0,
-              color: adjustColorOpacity(
-                getCssVariable("--color-violet-500"),
-                0
-              ),
+              color: adjustColorOpacity(getCssVariable("--color-red-600"), 0),
             },
             {
               stop: 1,
-              color: adjustColorOpacity(
-                getCssVariable("--color-violet-500"),
-                0.2
-              ),
+              color: adjustColorOpacity(getCssVariable("--color-red-600"), 0.2),
             },
           ]);
           return gradientOrColor || "transparent";
         },
-        borderColor: getCssVariable("--color-violet-500"),
-        borderWidth: 2,
+        borderColor: getCssVariable("--color-red-600"),
+        borderWidth: 4,
         pointRadius: 0,
         pointHoverRadius: 3,
-        pointBackgroundColor: getCssVariable("--color-violet-500"),
-        pointHoverBackgroundColor: getCssVariable("--color-violet-500"),
+        pointBackgroundColor: getCssVariable("--color-red-600"),
+        pointHoverBackgroundColor: getCssVariable("--color-red-600"),
         pointBorderWidth: 0,
         pointHoverBorderWidth: 0,
         clip: 20,
         tension: 0.2,
       },
-      // Gray line
+      // Green line
       {
         data: [
-          689, 562, 477, 477, 477, 477, 458, 314, 430, 378, 430, 498, 642, 350,
-          145, 145, 354, 260, 188, 188, 300, 300, 282, 364, 660, 554,
+          732, 610, 610, 504, 504, 504, 349, 349, 504, 342, 504, 610, 391, 192,
+          154, 273, 191, 191, 126, 263, 349, 252, 423, 622, 470, 532,
         ],
         borderColor: adjustColorOpacity(
-          getCssVariable("--color-gray-500"),
-          0.25
+          getCssVariable("--color-green-500"),
+          0.6
         ),
-        borderWidth: 2,
+        borderWidth: 4,
         pointRadius: 0,
         pointHoverRadius: 3,
         pointBackgroundColor: adjustColorOpacity(
-          getCssVariable("--color-gray-500"),
-          0.25
+          getCssVariable("--color-green-500"),
+          0.6
         ),
         pointHoverBackgroundColor: adjustColorOpacity(
-          getCssVariable("--color-gray-500"),
-          0.25
+          getCssVariable("--color-green-500"),
+          0.6
         ),
         pointBorderWidth: 0,
         pointHoverBorderWidth: 0,
@@ -111,20 +105,14 @@ export default function DashboardCard03() {
       <div className="px-5 pt-5">
         <header className="flex justify-between items-start mb-2">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2">
-            Linechart 01, card 03
+            Asset Health
           </h2>
           {/* Menu button */}
           <EditMenu align="right" />
         </header>
-        <div className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase mb-1">
-          Sales
-        </div>
         <div className="flex items-start">
-          <div className="text-3xl font-bold text-gray-800 dark:text-gray-100 mr-2">
-            $9,962
-          </div>
-          <div className="text-sm font-medium text-green-700 px-1.5 bg-green-500/20 rounded-full">
-            +49%
+          <div className="font-bold text-gray-800 dark:text-gray-100 mr-2">
+            123 Assets
           </div>
         </div>
       </div>

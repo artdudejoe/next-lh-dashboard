@@ -7,8 +7,10 @@ import FilterButton from "@/components/dropdown-filter";
 import Datepicker from "@/components/datepicker";
 import DashboardIntro from "./dashboard-intro";
 import WorkOrderStatusChart from "@/components/WorkOrderStatusChart";
+import DashboardWorkSources from "./dashboard-work-sources";
 
-import DashboardCard02 from "./dashboard-card-02";
+import DashboardHealth from "./dashboard-health";
+
 import DashboardCard03 from "./dashboard-card-03";
 import DashboardCard05 from "./dashboard-card-05";
 import DashboardCard06 from "./dashboard-card-06";
@@ -17,7 +19,6 @@ import DashboardCard08 from "./dashboard-card-08";
 import DashboardCard09 from "./dashboard-card-09";
 import DashboardCard10 from "./dashboard-card-10";
 import DashboardCard11 from "./dashboard-card-11";
-import DashboardCard12 from "./dashboard-card-12";
 
 export default function Dashboard() {
   return (
@@ -55,28 +56,22 @@ export default function Dashboard() {
       <div className="grid grid-cols-12 gap-6">
         {/* Page Intro */}
         <DashboardIntro />
-        {/*
-          Bar chart Work status
-        */}
+        {/* Bar chart Work status */}
         <WorkOrderStatusChart />
         {/* Line chart (Acme Advanced) */}
-        <DashboardCard02 />
+        <DashboardHealth />
         {/* Pie chart (Work Sources) */}
-        <DashboardCard12 />
-        {/* Line chart (Real Time Value) */}
-        <DashboardCard05 />
-        {/* Doughnut chart (Top Countries) */}
-        <DashboardCard06 />
-        {/* Table (Top Channels) */}
-        <DashboardCard07 />
-        {/* Line chart (Sales Over Time) */}
-        <DashboardCard08 />
-        {/* Stacked bar chart (Sales VS Refunds) */}
-        <DashboardCard09 />
+        <DashboardWorkSources />
         {/* Card (Recent Activity) */}
         <DashboardCard10 />
         {/* Card (Income/Expenses) */}
         <DashboardCard11 />
+
+        {/* Extras */}
+        <DashboardCard06 />
+        <DashboardCard07 />
+        <DashboardCard08 />
+        <DashboardCard09 />
       </div>
     </div>
   );

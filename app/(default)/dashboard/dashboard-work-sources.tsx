@@ -5,7 +5,7 @@ import PieChart from "@/components/charts/pie-chart";
 // Import utilities
 import { getCssVariable } from "@/components/utils/utils";
 
-export default function DashboardCard12() {
+export default function DashboardWorkSources() {
   const chartData = {
     labels: ["Installations", "Tenant Requests", "Repairs", "Maintenance"],
     datasets: [
